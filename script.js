@@ -68,12 +68,12 @@ function win() {
   if (
     cases[0].innerHTML !== "" &&
     cases[0].innerHTML === cases[3].innerHTML &&
-    cases[0].innerHTML === cases[5].innerHTML
+    cases[0].innerHTML === cases[6].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
     cases[0].style.background = "#1aa842";
     cases[3].style.background = "#1aa842";
-    cases[5].style.background = "#1aa842";
+    cases[6].style.background = "#1aa842";
   }
   //5th win cond
   if (
@@ -131,6 +131,8 @@ function reset() {
     cases.innerHTML = "";
     //reset cases bg style after a win
     cases.style.background = "#6b2e2e";
+    //reset result text
+    resultText.innerHTML = "";
   });
   i = 0;
 }
