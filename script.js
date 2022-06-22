@@ -2,6 +2,7 @@
 let i = 0;
 const cases = document.querySelectorAll(".case");
 const resultText = document.getElementById("result");
+const btnReset = document.getElementById("reset");
 
 function turn() {
   //new index, new turn
@@ -37,6 +38,9 @@ function win() {
     cases[0].innerHTML === cases[2].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
+    cases[0].style.background = "#1aa842";
+    cases[1].style.background = "#1aa842";
+    cases[2].style.background = "#1aa842";
   }
   //2nd win cond
   if (
@@ -94,4 +98,18 @@ function win() {
   ) {
     resultText.innerHTML = "You kicked his ass !";
   }
+}
+
+//Listen to the function reset on btnReset click
+btnReset.addEventListener("click", reset);
+
+//cases are now empty & index set to 0
+function reset() {
+  cases.forEach((cases) => {
+    //reset cases values
+    cases.innerHTML = "";
+    //reset cases bg style after a win
+    cases.style.background = "#6b2e2e";
+  });
+  i = 0;
 }
