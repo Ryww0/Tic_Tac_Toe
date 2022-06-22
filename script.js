@@ -38,9 +38,9 @@ function win() {
     cases[0].innerHTML === cases[2].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa842";
-    cases[1].style.background = "#1aa842";
-    cases[2].style.background = "#1aa842";
+    cases[0].style.background = "#1aa84262";
+    cases[1].style.background = "#1aa84262";
+    cases[2].style.background = "#1aa84262";
   }
   //2nd win cond
   if (
@@ -49,9 +49,9 @@ function win() {
     cases[3].innerHTML === cases[5].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[3].style.background = "#1aa842";
-    cases[4].style.background = "#1aa842";
-    cases[5].style.background = "#1aa842";
+    cases[3].style.background = "#1aa84262";
+    cases[4].style.background = "#1aa84262";
+    cases[5].style.background = "#1aa84262";
   }
   //3rd win cond
   if (
@@ -60,9 +60,9 @@ function win() {
     cases[6].innerHTML === cases[8].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[6].style.background = "#1aa842";
-    cases[7].style.background = "#1aa842";
-    cases[8].style.background = "#1aa842";
+    cases[6].style.background = "#1aa84262";
+    cases[7].style.background = "#1aa84262";
+    cases[8].style.background = "#1aa84262";
   }
   //4th win cond
   if (
@@ -71,9 +71,9 @@ function win() {
     cases[0].innerHTML === cases[6].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa842";
-    cases[3].style.background = "#1aa842";
-    cases[6].style.background = "#1aa842";
+    cases[0].style.background = "#1aa84262";
+    cases[3].style.background = "#1aa84262";
+    cases[6].style.background = "#1aa84262";
   }
   //5th win cond
   if (
@@ -82,9 +82,9 @@ function win() {
     cases[1].innerHTML === cases[7].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[1].style.background = "#1aa842";
-    cases[4].style.background = "#1aa842";
-    cases[7].style.background = "#1aa842";
+    cases[1].style.background = "#1aa84262";
+    cases[4].style.background = "#1aa84262";
+    cases[7].style.background = "#1aa84262";
   }
   //6th win cond
   if (
@@ -93,9 +93,9 @@ function win() {
     cases[2].innerHTML === cases[8].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[2].style.background = "#1aa842";
-    cases[5].style.background = "#1aa842";
-    cases[8].style.background = "#1aa842";
+    cases[2].style.background = "#1aa84262";
+    cases[5].style.background = "#1aa84262";
+    cases[8].style.background = "#1aa84262";
   }
   //7th win cond
   if (
@@ -104,9 +104,9 @@ function win() {
     cases[2].innerHTML === cases[6].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[2].style.background = "#1aa842";
-    cases[4].style.background = "#1aa842";
-    cases[6].style.background = "#1aa842";
+    cases[2].style.background = "#1aa84262";
+    cases[4].style.background = "#1aa84262";
+    cases[6].style.background = "#1aa84262";
   }
   //8th win cond
   if (
@@ -115,9 +115,9 @@ function win() {
     cases[0].innerHTML === cases[8].innerHTML
   ) {
     resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa842";
-    cases[4].style.background = "#1aa842";
-    cases[8].style.background = "#1aa842";
+    cases[0].style.background = "#1aa84262";
+    cases[4].style.background = "#1aa84262";
+    cases[8].style.background = "#1aa84262";
   }
 }
 
