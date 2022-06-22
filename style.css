@@ -4,7 +4,7 @@
 }
 body {
   background: #6b2e2e;
-  color: #a3ead6;
+  color: #5eebc3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,9 +12,7 @@ body {
   font-family: "Potta One", cursive;
   font-size: 6rem;
   line-height: 1;
-}
-p {
-  width: 0;
+  flex-direction: column;
 }
 .morpion {
   display: flex;
@@ -31,4 +29,34 @@ p {
   width: calc(1 / 3 * 100% - 9px);
   height: calc(1 / 3 * 100% - 6px);
   margin: 3px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+#result {
+  border-radius: 5px;
+  box-shadow: inset -10px 10px 10px #5b2727, inset 10px -10px 10px #7b3535;
+  min-width: 50vh;
+  height: 8%;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#reset {
+  background: #6b2e2e;
+  border-color: #5eebc3;
+  color: #5eebc3;
+  font-size: 1rem;
+  box-shadow: 10px 10px 30px #5b2727, -10px -10px 30px #7b3535;
+  width: 30%;
+  height: 8%;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#reset:active {
+  transform: scale(0.97);
 }
