@@ -15,114 +15,19 @@ function turn() {
   }
 }
 
-// add crosses and cirle in the cases
-function play() {
-  // console.log(i);
-  if (!this.innerHTML) {
-    this.innerHTML = turn();
-    win();
+//function that setup our win conditions
+function win(a, b, c) {
+  if (
+    cases[a].innerHTML !== "" &&
+    cases[a].innerHTML === cases[b].innerHTML &&
+    cases[a].innerHTML === cases[c].innerHTML
+  ) {
+    resultText.innerHTML = "You kicked his ass !";
+    cases[a].style.background = "#1aa84262";
+    cases[b].style.background = "#1aa84262";
+    cases[c].style.background = "#1aa84262";
   }
 }
-
-//change the content cases on click
-cases.forEach((c) => {
-  c.addEventListener("click", play);
-});
-
-//8 victory conditions
-function win() {
-  //1st win condition
-  if (
-    cases[0].innerHTML !== "" &&
-    cases[0].innerHTML === cases[1].innerHTML &&
-    cases[0].innerHTML === cases[2].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa84262";
-    cases[1].style.background = "#1aa84262";
-    cases[2].style.background = "#1aa84262";
-  }
-  //2nd win cond
-  if (
-    cases[3].innerHTML !== "" &&
-    cases[3].innerHTML === cases[4].innerHTML &&
-    cases[3].innerHTML === cases[5].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[3].style.background = "#1aa84262";
-    cases[4].style.background = "#1aa84262";
-    cases[5].style.background = "#1aa84262";
-  }
-  //3rd win cond
-  if (
-    cases[6].innerHTML !== "" &&
-    cases[6].innerHTML === cases[7].innerHTML &&
-    cases[6].innerHTML === cases[8].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[6].style.background = "#1aa84262";
-    cases[7].style.background = "#1aa84262";
-    cases[8].style.background = "#1aa84262";
-  }
-  //4th win cond
-  if (
-    cases[0].innerHTML !== "" &&
-    cases[0].innerHTML === cases[3].innerHTML &&
-    cases[0].innerHTML === cases[6].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa84262";
-    cases[3].style.background = "#1aa84262";
-    cases[6].style.background = "#1aa84262";
-  }
-  //5th win cond
-  if (
-    cases[1].innerHTML !== "" &&
-    cases[1].innerHTML === cases[4].innerHTML &&
-    cases[1].innerHTML === cases[7].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[1].style.background = "#1aa84262";
-    cases[4].style.background = "#1aa84262";
-    cases[7].style.background = "#1aa84262";
-  }
-  //6th win cond
-  if (
-    cases[2].innerHTML !== "" &&
-    cases[2].innerHTML === cases[5].innerHTML &&
-    cases[2].innerHTML === cases[8].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[2].style.background = "#1aa84262";
-    cases[5].style.background = "#1aa84262";
-    cases[8].style.background = "#1aa84262";
-  }
-  //7th win cond
-  if (
-    cases[2].innerHTML !== "" &&
-    cases[2].innerHTML === cases[4].innerHTML &&
-    cases[2].innerHTML === cases[6].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[2].style.background = "#1aa84262";
-    cases[4].style.background = "#1aa84262";
-    cases[6].style.background = "#1aa84262";
-  }
-  //8th win cond
-  if (
-    cases[0].innerHTML !== "" &&
-    cases[0].innerHTML === cases[4].innerHTML &&
-    cases[0].innerHTML === cases[8].innerHTML
-  ) {
-    resultText.innerHTML = "You kicked his ass !";
-    cases[0].style.background = "#1aa84262";
-    cases[4].style.background = "#1aa84262";
-    cases[8].style.background = "#1aa84262";
-  }
-}
-
-//Listen to the function reset on btnReset click
-btnReset.addEventListener("click", reset);
 
 //cases are now empty & index set to 0
 function reset() {
@@ -136,3 +41,28 @@ function reset() {
   });
   i = 0;
 }
+
+// add crosses and cirle in the cases
+function play() {
+  // console.log(i);
+  if (!this.innerHTML) {
+    this.innerHTML = turn();
+  }
+  //8 victory conditions
+  win(0, 1, 2);
+  win(3, 4, 5);
+  win(6, 7, 8);
+  win(0, 3, 6);
+  win(1, 4, 7);
+  win(2, 5, 8);
+  win(2, 4, 6);
+  win(0, 4, 8);
+}
+
+//change the content cases on click
+cases.forEach((c) => {
+  c.addEventListener("click", play);
+});
+
+//Listen to the function reset on btnReset click
+btnReset.addEventListener("click", reset);
